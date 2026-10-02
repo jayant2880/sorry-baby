@@ -190,7 +190,7 @@ document.getElementById('jokeBtn').onclick = function() {
 var no=document.getElementById('no'),box=document.getElementById('yesno');
 function dodge(){var w=box.clientWidth-no.offsetWidth,h=box.clientHeight-no.offsetHeight;no.style.left=Math.random()*w+'px';no.style.top=Math.random()*h+'px'}
 no.addEventListener('mouseover',dodge);no.addEventListener('touchstart',function(e){e.preventDefault();dodge()},{passive:false});no.addEventListener('click',dodge);
-document.getElementById('yes').onclick=function(){document.getElementById('final').textContent="Thank you, my love. I promise to be gentler with your heart. 💗🧁";no.hidden=true;
+document.getElementById('yes').onclick=function(){document.getElementById('final').textContent="Thank you, my bachaaaa. I promise to be gentler with your heart. muwahhhhhhhhhhh 💗🧁";no.hidden=true;
 for(var i=0;i<30;i++){(function(i){setTimeout(function(){var c=document.createElement('span');c.className='conf';c.textContent=['💗','🧁','🤍','🐧'][i%4];c.style.left=Math.random()*100+'%';document.body.appendChild(c);setTimeout(function(){c.remove()},3200)},i*90)})(i)}};
 // auto-load files placed beside this page
 var names=['photo1','photo2','mumma'],exts=['jpg','jpeg','png','webp'];
