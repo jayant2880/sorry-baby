@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A little sorry, just for you 🧁</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffafc;--ink:#4a3548;--pink:#ff8fab;--soft:#ffe3ec;--card:#fff;--line:#f6d3df;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fffafc;--ink:#4a3548}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Fredoka,"Trebuchet MS",sans-serif;line-height:1.55;overflow-x:hidden}
+section{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:34px 20px;text-align:center}
+h1{font-size:2.1rem;margin:.2em 0}h2{font-size:1.5rem;margin:0 0 .4em}
+.card{background:var(--card);border:2px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 6px 0 var(--line)}
+button{font:inherit;font-weight:600;border:0;border-radius:999px;padding:12px 22px;background:var(--pink);color:#fff;cursor:pointer;box-shadow:0 4px 0 #e5708f}
+button.alt{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:0 4px 0 var(--line)}
+button:active{transform:translateY(3px);box-shadow:none}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:0}
+.snow i{position:absolute;top:-20px;color:var(--pink);opacity:.35;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh)}}
+#hero svg{width:170px;animation:wob 2.6s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(4deg) translateY(-6px)}}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ph{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:10px;box-shadow:0 4px 0 var(--line)}
+.ph label{display:flex;align-items:center;justify-content:center;aspect-ratio:1;border-radius:14px;background:var(--soft);cursor:pointer;overflow:hidden;padding:8px}
+.ph img{width:100%;height:100%;object-fit:cover}.ph input{display:none}
+#arena{position:relative;height:320px;border-radius:24px;background:linear-gradient(#fff,#ffeaf1);border:2px solid var(--line);overflow:hidden;touch-action:none}
+.cup{position:absolute;top:-40px;font-size:2rem;cursor:pointer;user-select:none;animation:drop 4s linear forwards}
+@keyframes drop{to{top:330px}}
+#cake{font-size:4.5rem;min-height:6rem;line-height:1.1}
+.opts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
+.opts button{padding:8px 14px;font-size:.95rem}
+.opts button.on{background:var(--pink);color:#fff;border-color:var(--pink)}
+.coupon{border:3px dashed var(--pink);border-radius:20px;padding:16px;background:var(--soft);margin:10px 0}
+#yesno{position:relative;height:130px}#no{position:absolute;background:#b9a9b7;box-shadow:0 4px 0 #9a8a98}
+.conf{position:fixed;top:-20px;z-index:9;font-size:1.6rem;animation:fall 3s linear forwards;pointer-events:none}
+#joke{min-height:3.4em;font-size:1.15rem}
+@media (prefers-reduced-motion:reduce){#hero svg,.snow i{animation:none}}
+</style></head><body>
+<div class="snow" id="snow" aria-hidden="true"></div>
+
+<section id="hero">
+<svg viewBox="0 0 120 130" role="img" aria-label="A sad little penguin holding a cupcake">
+<ellipse cx="60" cy="75" rx="42" ry="48" fill="#4a3548"/><ellipse cx="60" cy="86" rx="28" ry="36" fill="#fff"/>
+<circle cx="46" cy="52" r="6" fill="#fff"/><circle cx="74" cy="52" r="6" fill="#fff"/>
+<circle cx="47" cy="54" r="3" fill="#4a3548"/><circle cx="73" cy="54" r="3" fill="#4a3548"/>
+<path d="M50 62 L70 62 L60 74Z" fill="#ffb347"/>
+<ellipse cx="40" cy="64" rx="6" ry="3.5" fill="#ff8fab" opacity=".7"/><ellipse cx="80" cy="64" rx="6" ry="3.5" fill="#ff8fab" opacity=".7"/>
+<ellipse cx="45" cy="124" rx="14" ry="6" fill="#ffb347"/><ellipse cx="75" cy="124" rx="14" ry="6" fill="#ffb347"/>
+<path d="M48 108 L72 108 L68 122 L52 122Z" fill="#f4b183"/><path d="M46 108 Q60 88 74 108Z" fill="#fff" stroke="#f6d3df" stroke-width="2"/><circle cx="60" cy="94" r="4" fill="#ff5d82"/>
+</svg>
+<h1>I'm sorry, my bachaaaaaa 🧁</h1>
+<p>Pingu the penguin helped me build this, because saying sorry in words didn't feel like enough. Please give us a few minutes?</p>
+<button id="musicBtn" aria-pressed="false">🎵 Play our little song</button>
+</section>
+
+<section><div class="card">
+<h2>What I want to say</h2>
+<p>I told you I was breaking up with you, and I saw how much it hurt you. You cried, and I can't stop thinking about it. I never want to be the reason for your tears.</p>
+<p>I was wrong to say it. I said it without thinking about your heart, and I'm truly sorry.</p>
+<p>You're not someone I want to lose. I want to do better, and I want to show you, not just tell you.</p>
+</div></section>
+
+<section>
+<h2>Little you 🤍</h2>
+<p>Tap a box to add a photo.</p>
+<div class="photos">
+<div class="ph"><label><img alt="" hidden><span>👶 my favourite pic ofc</span><input type="file" accept="image/*"></label></div>
+<div class="ph"><label><img alt="" hidden><span>🎀 Another favourite</span><input type="file" accept="image/*"></label></div>
+<div class="ph"><label><img alt="" hidden><span>👩‍👧 You, didi and Mumma</span><input type="file" accept="image/*"></label></div>
+</div>
+<p>Same sweet smile, then and now. I love it so muchhhh.</p>
+<div class="card" style="margin-top:14px"><b>You, didi and Mumma 🤍</b><br>Three of the cutest smiles I know. You got your sparkle from mumma, and anyone can see how much love is in that picture.</div>
+</section>
+
+<section>
+<h2>Bake you a cupcake 🧁</h2>
+<p>Build one just the way you like it.</p>
+<div class="card"><div id="cake" aria-live="polite">🧁</div>
+<div class="opts" data-k="base"><button class="alt on">🧁 Classic</button><button class="alt">🍰 Strawberry</button><button class="alt">🍫 Chocolate</button></div>
+<div class="opts" data-k="top"><button class="alt">🍓 Strawberry</button><button class="alt">🍒 Cherry</button><button class="alt">✨ Sprinkles</button><button class="alt">🤍 Whipped cream</button></div>
+<button id="serve">Serve it to me 💗</button><p id="cakeMsg" aria-live="polite"></p></div>
+</section>
+
+<section>
+<h2>Catch the cupcakes</h2>
+<p>Tap 10 cupcakes before they hit the floor! Score: <b id="score">0</b>/10</p>
+<div id="arena" aria-label="Cupcake game"></div>
+<p><button id="startGame">Start</button></p>
+<p id="gameMsg" aria-live="polite"></p>
+</section>
+
+<section><div class="card">
+<h2>something special for you</h2>
+<p id="joke" aria-live="polite">Tap the button for a little surprise 💌</p>
+<button id="jokeBtn">Tap for a surprise 💌</button>
+</div></section>
+
+<section>
+<h2>A little coupon 🎟️</h2>
+<div class="coupon"><b>One cupcake date, on me.</b><br>Your favourite flavour, your favourite place, no phone from me.<br><small>Valid forever, never expires.</small></div>
+</section>
+
+<section>
+<h2>One last question</h2>
+<p>Pingu has been practising this all week.</p>
+<div id="yesno">
+<button id="yes" style="position:absolute;left:8%;top:20px">Yes, I forgive you 💗</button>
+<button id="no" style="left:68%;top:20px">No</button>
+</div>
+<p id="final" aria-live="polite" style="font-size:1.2rem"></p>
+<p style="font-size:.9rem">And I'm still getting you that penguin plushie. 🐧</p>
+</section>
+
+<script>
+(function(){var s=document.getElementById('snow');for(var i=0;i<22;i++){var e=document.createElement('i');e.textContent=['🤍','❄','✨'][i%3];e.style.left=Math.random()*100+'%';e.style.fontSize=(10+Math.random()*14)+'px';e.style.animationDuration=(8+Math.random()*8)+'s';e.style.animationDelay=(-Math.random()*10)+'s';s.appendChild(e)}})();
+document.querySelectorAll('.ph input').forEach(function(inp){inp.addEventListener('change',function(){var f=inp.files[0];if(!f)return;var img=inp.parentNode.querySelector('img');img.src=URL.createObjectURL(f);img.hidden=false;inp.parentNode.querySelector('span').hidden=true})});
+
+var ctx,playing=false,timer,step=0;
+var N={C:523.25,D:587.33,E:659.25,F:698.46,G:783.99,A:880,B:987.77,c:1046.5,g:392};
+var tune=['E','G','c','G','E','G','c','G','F','A','c','A','F','A','c','A','D','F','B','F','D','F','B','F','C','E','G','E','C','E','G','g'];
+function note(f){var o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(.18,ctx.currentTime+.02);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1.1);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+1.2)}
+var mb=document.getElementById('musicBtn');
+mb.onclick=function(){try{if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume();playing=!playing;mb.setAttribute('aria-pressed',playing);
+if(playing){mb.textContent='⏸ Pause the song';timer=setInterval(function(){note(N[tune[step%tune.length]]);step++},420)}else{mb.textContent='🎵 Play our little song';clearInterval(timer)}}catch(e){}};
+
+var pick={base:'🧁',top:''};
+document.querySelectorAll('.opts').forEach(function(g){g.querySelectorAll('button').forEach(function(b){b.onclick=function(){
+g.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+pick[g.dataset.k]=b.textContent.split(' ')[0];document.getElementById('cake').textContent=pick.base+pick.top}})});
+document.getElementById('serve').onclick=function(){document.getElementById('cakeMsg').textContent='Made with love, just for you. I wish I could hand it over right now. 💗'};
+
+var score=0,runG=false,spawn,arena=document.getElementById('arena');
+document.getElementById('startGame').onclick=function(){
+score=0;runG=true;document.getElementById('score').textContent=0;document.getElementById('gameMsg').textContent='';arena.innerHTML='';clearInterval(spawn);
+spawn=setInterval(function(){if(!runG)return;var f=document.createElement('span');f.className='cup';f.textContent=Math.random()<.25?'💗':'🧁';f.style.left=(5+Math.random()*82)+'%';
+var hit=function(e){e.preventDefault();if(!runG)return;f.remove();score++;document.getElementById('score').textContent=score;
+if(score>=10){runG=false;clearInterval(spawn);arena.innerHTML='<div style="padding-top:100px;font-size:3.2rem">🧁💗🐧</div>';document.getElementById('gameMsg').textContent='You win! Prize: all my love, plus a real cupcake.'}};
+f.addEventListener('pointerdown',hit);f.addEventListener('animationend',function(){f.remove()});arena.appendChild(f)},600)};
+var jokes = [
+  "You make ordinary days feel a little more special. ❤️",
+
+  "Life is just better when I get to share it with you. 🫶",
+
+  "You’re one of my favorite parts of every day. ❤️",
+
+  "I hope you know how much you mean to me. 🥹",
+
+  "You make me smile without even trying. ❤️",
+
+  "Somehow, even doing nothing feels fun with you. 🫶",
+
+  "I’m really lucky to have you in my life. ❤️",
+
+  "You’re my favorite person to talk to, about absolutely anything. 💗",
+
+  "Thank you for being you. That’s honestly enough. ❤️",
+
+  "You make the little moments feel like big ones. 🥹",
+
+  "I love how comfortable I can be around you. ❤️",
+
+  "No matter how my day goes, talking to you makes it better. 🫶",
+
+  "You’re someone I never get tired of having around. ❤️",
+
+  "I’m happiest when we’re just being ourselves together. 💗",
+
+  "You’ve become such a beautiful part of my life. ❤️",
+
+  "I don’t need a special occasion to appreciate you. 🥹",
+
+  "You make my world feel a little warmer. ❤️",
+
+  "I love our little conversations, our silly moments, and everything in between. 🫶",
+
+  "Having you beside me makes even ordinary moments memorable. ❤️",
+
+  "Just a reminder: you’re loved, appreciated, and very important to me. 💗"
+];
+
+var ji = 0;
+
+document.getElementById('jokeBtn').onclick = function() {
+  document.getElementById('joke').textContent = jokes[ji % jokes.length];
+  ji++;
+  this.textContent = 'One more 💌';
+};
+
+var no=document.getElementById('no'),box=document.getElementById('yesno');
+function dodge(){var w=box.clientWidth-no.offsetWidth,h=box.clientHeight-no.offsetHeight;no.style.left=Math.random()*w+'px';no.style.top=Math.random()*h+'px'}
+no.addEventListener('mouseover',dodge);no.addEventListener('touchstart',function(e){e.preventDefault();dodge()},{passive:false});no.addEventListener('click',dodge);
+document.getElementById('yes').onclick=function(){document.getElementById('final').textContent="Thank you, my love. I promise to be gentler with your heart. 💗🧁";no.hidden=true;
+for(var i=0;i<30;i++){(function(i){setTimeout(function(){var c=document.createElement('span');c.className='conf';c.textContent=['💗','🧁','🤍','🐧'][i%4];c.style.left=Math.random()*100+'%';document.body.appendChild(c);setTimeout(function(){c.remove()},3200)},i*90)})(i)}};
+// auto-load files placed beside this page
+var names=['photo1','photo2','mumma'],exts=['jpg','jpeg','png','webp'];
+document.querySelectorAll('.ph').forEach(function(ph,i){
+var img=ph.querySelector('img'),sp=ph.querySelector('span'),k=0;
+(function tryNext(){if(k>=exts.length)return;var t=new Image(),u=names[i]+'.'+exts[k++];
+t.onload=function(){img.src=u;img.hidden=false;sp.hidden=true};t.onerror=tryNext;t.src=u})()});
+var song=new Audio('song.mp3'),hasSong=false,oldClick=mb.onclick;
+song.loop=true;song.addEventListener('canplay',function(){hasSong=true});
+mb.onclick=function(){
+if(!hasSong)return oldClick();
+playing=!playing;mb.setAttribute('aria-pressed',playing);
+if(playing){song.play();mb.textContent='⏸ Pause the song'}else{song.pause();mb.textContent='🎵 Play our little song'}};
+</script></body></html>
